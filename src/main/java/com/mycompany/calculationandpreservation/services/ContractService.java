@@ -96,7 +96,7 @@ public class ContractService {
                 }
                 long days = (dateTo.getTime() - dateFrom.getTime()) / 1000 / 60 / 60 / 24;
                 prize = (sum / days) * kY * kP * kA;
-                String dateFromStr = (dateFrom.getYear() + 1900) + "-" + (dateFrom.getMonth() + 1) + "-";
+                /*String dateFromStr = (dateFrom.getYear() + 1900) + "-" + (dateFrom.getMonth() + 1) + "-";
                 String dateToStr = (dateTo.getYear() + 1900) + "-" + (dateTo.getMonth() + 1) + "-";
                 if (dateFrom.getDate() < 10) {
                     dateFromStr += "0" + dateFrom.getDate();
@@ -107,19 +107,11 @@ public class ContractService {
                     dateToStr += "0" + dateTo.getDate();
                 } else {
                     dateToStr += dateTo.getDate();
-                }
+                }*/
                 if (prize < 0) {
                     prize = -prize;
                 }
-                /*req.setAttribute("prize", prize);
-                req.setAttribute("dateFrom", dateFromStr);
-                req.setAttribute("dateTo", dateToStr);
-                req.setAttribute("conclusion_date", local);*/
             }
-            /*req.setAttribute("sum", sum);
-            req.setAttribute("property", property);
-            req.setAttribute("year", year);
-            req.setAttribute("area", area);*/
             address.setBuildingYear(year);
             address.setBuildingType(property);
             address.setBuildingArea(area);
